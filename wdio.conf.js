@@ -65,7 +65,7 @@ exports.config = {
         // https://github.com/appium/appium/releases/tag/v1.13.0
         'appium:automationName': 'UiAutomator2',
         // The path to the app
-        'appium:app': '/Users/a0b08kx/Downloads/Shopkick-defaultFlavor-release (1).apk',
+        'appium:app': `${process.cwd()}/apps/Shopkick-defaultFlavor-release (1).apk`,
         // Read the reset strategies very well, they differ per platform, see
         // http://appium.io/docs/en/writing-running-appium/other/reset-strategies/
         'appium:noReset': true,

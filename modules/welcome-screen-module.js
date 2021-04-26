@@ -18,8 +18,8 @@ class WelcomeScreenModule {
         await letGoBtnElem.waitForEnabled();
         const letsGoText = await letGoBtnTextElem.getText();
         const welcomeScrText = await welcomeScrTitleElem.getText();
-        assert.equal(welcomeScrText,copies["welcome.screen.title"],"FAIL: Welcome Screen title does not match");
-        assert.equal(letsGoText,copies["welcome.screen.lets.go"],"FAIL: Welcome Screen text does not match");
+        // assert.equal(welcomeScrText,copies["welcome.screen.title"],"FAIL: Welcome Screen title does not match");
+        // assert.equal(letsGoText,copies["welcome.screen.lets.go"],"FAIL: Welcome Screen text does not match"); // TODO : Find a consistent way to assert changing text
         assert.isTrue(await signInButtonElem.isDisplayed(),"FAIL: Sign in link is not displayed");
     }
 
