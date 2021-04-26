@@ -14,7 +14,7 @@ class RewardsModule {
     async verifyRewardsCopies() {
         const rewardsScrTitleElem = await $(rewardsScrTitle);
         const rewardsScrDescElem = await $(rewardsScrDesc);
-        assert.equal(await rewardsScrTitleElem.getText(),copies["reward.screen.title"],"FAIL: Reward screen title does not match");
+        assert.equal(this.getFormattedString(await rewardsScrTitleElem.getText()),copies["reward.screen.title"],"FAIL: Reward screen title does not match");
         assert.equal(await rewardsScrDescElem.getText(),copies["reward.screen.desc"],"FAIL: Reward screen description does not match");
     }
 
