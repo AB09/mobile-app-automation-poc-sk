@@ -39,3 +39,12 @@ To run UI APP tests **ONLY** execute below command on your terminal
 `npm run test-ui`
 
 
+# Reporting
+
+1. I am using mochawesome reporter to log my test results. After the tests is completed, individual json files are created for
+individual spec file and later using `onCompleteHook` those individual json are merged
+2. Later I run below command to generate HTML report based on the json 
+`npm run generateMochawesome`
+
+
+
