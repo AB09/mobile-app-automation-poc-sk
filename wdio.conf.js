@@ -160,7 +160,13 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ['spec',
+        ['mochawesome',{
+            outputDir: './Results',
+            outputFileFormat: function(opts) {
+                return `results-${opts.cid}.json`
+            }
+        }]],
 
 
 
@@ -292,8 +298,10 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+    onComplete: function (exitCode, config, capabilities, results) {
+        const mergeResults = require('wdio-mochawesome-reporter/mergeResults');
+        mergeResults('./Results', "results-*")
+    }
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session
