@@ -32,4 +32,10 @@ export PATH=$PATH:$ANDROID_HOME/tools/lib/x86_64
 To run the tests execute below command on your terminal 
 `npm test`
 
+To run API tests **ONLY** execute below command on your terminal
+`npm run test-api`
+
+To run UI APP tests **ONLY** execute below command on your terminal
+`npm run test-ui`
+
 
