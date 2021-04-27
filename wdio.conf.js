@@ -24,8 +24,13 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-         './tests/*.spec.js'
+        './tests/**/*.spec.js'
     ],
+    suites: {
+        api: ['./tests/API-tests/*.spec.js'],
+        ui: ['./tests/*.spec.js']
+    },
+
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'

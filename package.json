@@ -4,7 +4,9 @@
   "description": "This POC is for SK for their app using Appium, Webdriver running on Android",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio run wdio.conf.js"
+    "test": "npx wdio run wdio.conf.js",
+    "test-api": "npx wdio run wdio.conf.js --suite api",
+    "test-ui": "npx wdio run wdio.conf.js --suite ui"
   },
   "repository": {
     "type": "git",
