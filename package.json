@@ -4,7 +4,9 @@
   "description": "This POC is for SK for their app using Appium, Webdriver running on Android",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio run wdio.conf.js"
+    "test": "npx wdio run wdio.conf.js",
+    "test-api": "npx wdio run wdio.conf.js --suite api",
+    "test-ui": "npx wdio run wdio.conf.js --suite ui"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,9 @@
     "url": "https://github.com/AB09/mobile-app-automation-poc-sk/issues"
   },
   "homepage": "https://github.com/AB09/mobile-app-automation-poc-sk#readme",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
   "devDependencies": {
     "@wdio/appium-service": "^7.5.0",
     "@wdio/cli": "^7.5.1",
